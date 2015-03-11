@@ -89,7 +89,7 @@ when 'rhel', 'fedora'
   end
 when 'debian'
   if node['platform'] == 'ubuntu'
-    default[:mongodb][:apt_repo] = 'ubuntu-upstart'
+    default[:mongodb][:apt_repo] = 'ubuntu'
     default[:mongodb][:init_dir] = '/etc/init/'
     default[:mongodb][:init_script_template] = 'debian-mongodb.upstart.erb'
   else
